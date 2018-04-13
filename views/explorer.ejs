@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h3><a href="<%=pathParts.prevPath %>"><%= pathParts.prevPath %></a><%=pathParts.current%></h3>
+<ul class="fa-ul">
+<% for (var i=0; i < directories.length; i++) {%>
+	<li><i class="fa fa-li fa-folder"></i><a href='<%=directories[i].url %>'><%= directories[i].name %></a></li>
+<% } %>
+</ul>
+<ul class="fa-ul">
+<% for (var i=0; i < files.length; i++) {%>
+	<li><i class="fa fa-li fa-file"></i><a href='<%=files[i].url %>'><%= files[i].name %></a></li>
+<% } %>
+</ul>
+</body>
+
+
+</html>
